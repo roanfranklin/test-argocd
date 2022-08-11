@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui
+  name: simplewhale
   namespace: apps
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: simplewhale
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: simplewhale
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-        name: guestbook-ui
+      - image: roanfranklin/simplewhale:latest
+        name: simplewhale
         ports:
         - containerPort: 80
