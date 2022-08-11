@@ -3,6 +3,11 @@ kind: Deployment
 metadata:
   name: racingcaranimation
 spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: "50%"
+      maxUnavailable: "50%"
   replicas: 1
   revisionHistoryLimit: 3
   selector:
