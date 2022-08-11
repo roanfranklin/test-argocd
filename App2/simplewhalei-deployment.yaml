@@ -15,7 +15,7 @@ spec:
         app: simplewhale
     spec:
       containers:
-      - image: roanfranklin/simplewhale:latest
+      - image: roanfranklin/simplewhale:dev.13
         name: simplewhale
         ports:
         - containerPort: 80
