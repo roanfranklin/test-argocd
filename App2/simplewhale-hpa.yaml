@@ -9,7 +9,7 @@ spec:
     kind: Deployment
     name: simplewhale
   minReplicas: 1
-  maxReplicas: 3
+  maxReplicas: 2
   targetCPUUtilizationPercentage: 80
 #  metrics:
 #  - type: Resource
