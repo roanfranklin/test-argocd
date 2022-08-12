@@ -22,13 +22,6 @@ spec:
       containers:
       - image: roanfranklin/pyappflasktest:latest
         name: pyappflasktest
-        # env:
-        # - name: dotEnv
-        #   valueFrom:
-        #     configMapKeyRef:
-        #       name: pyappflasktest-configmap
-        #       key: dot.env
-        #       path: /webapp/.env
         ports:
         - containerPort: 5000
         resources:
@@ -38,3 +31,14 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        volumeMounts:
+        - name: config
+          mountPath: "/webapp"
+          readOnly: true
+      volumes:
+        - name: config
+          configMap:
+            name: pyappflasktest-config
+            items:
+            - key: "dotEnv"
+              path: ".env"
