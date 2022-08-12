@@ -38,11 +38,11 @@ spec:
               configMapKeyRef:
                 name: pyappflasktest-configmap
                 key: MYSQL_DATABASE
-          - name: MYSQL_USERNAME
+          - name: MYSQL_USER
             valueFrom:
               configMapKeyRef:
                 name: pyappflasktest-configmap
-                key: MYSQL_USERNAME
+                key: MYSQL_USER
         ports:
         - containerPort: 5000
         resources:
