@@ -33,7 +33,7 @@ spec:
             cpu: "500m"
         volumeMounts:
         - name: config
-          mountPath: "/webapp"
+          mountPath: "/webapp/.env"
           readOnly: true
       volumes:
         - name: config
@@ -41,4 +41,4 @@ spec:
             name: pyappflasktest-config
             items:
             - key: "dotEnv"
-              path: ".env"
+              path: "dotEnv"
