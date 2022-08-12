@@ -1,9 +1,27 @@
-# apiVersion: v1
-# kind: ConfigMap
-# metadata:
-#   name: pyappflasktest
-#   labels:
-#     app: pyappflasktest
-# data:
-#   ENV1: $VAR1
-#   ENV2: $VAR2
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pyappflasktest-configmap
+  labels:
+    app: pyappflasktest
+data:
+  .env: |
+    DEBUG=True
+
+    MYSQL_HOST={{MYSQL_HOST}}
+    MYSQL_DATABASE={{MYSQL_DATABASE}}
+    MYSQL_USER="roanzito"
+    MYSQL_PASSWORD=""
+
+    JWT_SECRET_KEY=""
+    JWT_ACCESS_TOKEN_EXPIRES=""
+
+    MAIL_SERVER=""
+    MAIL_PORT=""
+    MAIL_USERNAME=""
+    MAIL_PASSWORD=""
+    MAIL_USE_TLS=""
+    MAIL_USE_SSL=""
+
+    AUTHOR="Roan Franklin"
+    GITHUB="https://github.com/roanfranklin"

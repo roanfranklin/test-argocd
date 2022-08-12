@@ -22,8 +22,12 @@ spec:
       - image: roanfranklin/pyappflasktest:latest
         name: pyappflasktest
         env:
-        - name: MYSQL_HOST
-          value: "test.mydomain.com"
+        - name: dotEnv
+          valueFrom:
+            configMapKeyRef:
+              name: pyappflasktest-configmap
+              path: /webapp/
+              key: .env
         ports:
         - containerPort: 5000
         resources:
