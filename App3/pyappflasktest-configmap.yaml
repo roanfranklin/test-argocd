@@ -7,7 +7,7 @@ data:
     DEBUG: "true"
     MYSQL_HOST: "{{MYSQL_HOST}}"
     MYSQL_DATABASE: "{{MYSQL_DATABASE}}"
-    MYSQL_USER: "roanzito"
+    MYSQL_USER: "{{MYSQL_USER}}"
     MYSQL_PASSWORD: ""
     JWT_SECRET_KEY: ""
     JWT_ACCESS_TOKEN_EXPIRES: ""
