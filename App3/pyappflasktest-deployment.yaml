@@ -21,6 +21,9 @@ spec:
       containers:
       - image: roanfranklin/pyappflasktest:latest
         name: pyappflasktest
+        env:
+        - name: MYSQL_HOST
+          value: "test.mydomain.com"
         ports:
         - containerPort: 5000
         resources:
