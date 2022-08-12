@@ -22,6 +22,27 @@ spec:
       containers:
       - image: roanfranklin/pyappflasktest:latest
         name: pyappflasktest
+        env:
+          - name: DEBUG
+            valueFrom:
+              configMapKeyRef:
+                name: pyappflasktest-configmap
+                key: DEBUG
+          - name: MYSQL_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: pyappflasktest-configmap
+                key: MYSQL_HOST
+          - name: MYSQL_DATABASE
+            valueFrom:
+              configMapKeyRef:
+                name: pyappflasktest-configmap
+                key: MYSQL_DATABASE
+          - name: MYSQL_USERNAME
+            valueFrom:
+              configMapKeyRef:
+                name: pyappflasktest-configmap
+                key: MYSQL_USERNAME
         ports:
         - containerPort: 5000
         resources:
@@ -31,14 +52,3 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-      #   volumeMounts:
-      #   - name: config
-      #     mountPath: "/webapp/"
-      #     readOnly: true
-      # volumes:
-      #   - name: config
-      #     configMap:
-      #       name: pyappflasktest-configmap
-      #       items:
-      #       - key: "dotEnv"
-      #         path: ".env"
