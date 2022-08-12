@@ -5,7 +5,7 @@ metadata:
   labels:
     app: pyappflasktest
 data:
-  .env: |
+  dotEnv: |
     DEBUG=True
 
     MYSQL_HOST={{MYSQL_HOST}}

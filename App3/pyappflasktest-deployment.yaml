@@ -26,8 +26,8 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: pyappflasktest-configmap
-              path: /webapp/
-              key: .env
+              key: dot.env
+              path: /webapp/.env
         ports:
         - containerPort: 5000
         resources:
