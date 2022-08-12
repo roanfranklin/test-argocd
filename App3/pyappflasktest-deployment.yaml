@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pyappflasktest
+  namespace: apps
 spec:
   strategy:
     type: RollingUpdate
@@ -21,13 +22,13 @@ spec:
       containers:
       - image: roanfranklin/pyappflasktest:latest
         name: pyappflasktest
-        env:
-        - name: dotEnv
-          valueFrom:
-            configMapKeyRef:
-              name: pyappflasktest-configmap
-              key: dot.env
-              path: /webapp/.env
+        # env:
+        # - name: dotEnv
+        #   valueFrom:
+        #     configMapKeyRef:
+        #       name: pyappflasktest-configmap
+        #       key: dot.env
+        #       path: /webapp/.env
         ports:
         - containerPort: 5000
         resources:
