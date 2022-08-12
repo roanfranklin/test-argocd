@@ -38,7 +38,7 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: pyappflasktest-config
+            name: pyappflasktest-configmap
             items:
             - key: "dotEnv"
               path: "dotEnv"
