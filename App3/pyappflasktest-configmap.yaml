@@ -5,8 +5,8 @@ metadata:
   namespace: apps
 data:
     DEBUG: "true"
-    MYSQL_HOST: "${MYSQL_HOST}"
-    MYSQL_DATABASE: "${MYSQL_DATABASE}"
+    MYSQL_HOST: "{{MYSQL_HOST}}"
+    MYSQL_DATABASE: "{{MYSQL_DATABASE}}"
     MYSQL_USER: "roanzito"
     MYSQL_PASSWORD: ""
     JWT_SECRET_KEY: ""
