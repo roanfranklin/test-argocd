@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: racingcaranimation
+  name: pyappflasktest
 spec:
   strategy:
     type: RollingUpdate
@@ -12,17 +12,17 @@ spec:
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: racingcaranimation
+      app: pyappflasktest
   template:
     metadata:
       labels:
-        app: racingcaranimation
+        app: pyappflasktest
     spec:
       containers:
-      - image: roanfranklin/racingcaranimation:latest
-        name: racingcaranimation
+      - image: roanfranklin/pyappflasktest:latest
+        name: pyappflasktest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
         resources:
           requests:
             memory: "64Mi"

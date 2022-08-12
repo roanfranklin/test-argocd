@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: racingcaranimation
+  name: pyappflasktest
   namespace: apps
 spec:
   entryPoints:
@@ -10,7 +10,7 @@ spec:
     - kind: Rule
       match: Host(`app3.remf.net.br`)
       services:
-        - name: racingcaranimation
-          port: 80
+        - name: pyappflasktest
+          port: 5000
   tls:
     certResolver: aws
