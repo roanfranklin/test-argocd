@@ -13,7 +13,7 @@ data:
     JWT_ACCESS_TOKEN_EXPIRES: ""
     MAIL_SERVER: ""
     MAIL_PORT: ""
-    MAIL_USERNAME: ""
+    MAIL_USER: ""
     MAIL_PASSWORD: ""
     MAIL_USE_TLS: ""
     MAIL_USE_SSL: ""
