@@ -20,7 +20,7 @@ spec:
         app: simplewhale
     spec:
       containers:
-      - image: roanfranklin/simplewhale:dev.13
+      - image: nginx:alpine
         name: simplewhale
         ports:
         - containerPort: 80
