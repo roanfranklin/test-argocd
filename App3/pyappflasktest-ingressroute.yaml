@@ -1,16 +1,16 @@
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: pyappflasktest
-  namespace: apps
-spec:
-  entryPoints:
-    - websecure
-  routes:
-    - kind: Rule
-      match: Host(`app3.remf.net.br`)
-      services:
-        - name: pyappflasktest
-          port: 5000
-  tls:
-    certResolver: aws
+# apiVersion: traefik.containo.us/v1alpha1
+# kind: IngressRoute
+# metadata:
+#   name: pyappflasktest
+#   namespace: apps
+# spec:
+#   entryPoints:
+#     - websecure
+#   routes:
+#     - kind: Rule
+#       match: Host(`app3.remf.net.br`)
+#       services:
+#         - name: pyappflasktest
+#           port: 5000
+#   tls:
+#     certResolver: aws
